@@ -1,88 +1,60 @@
-type Project = {
-  title: string
-  description: string
-  image: string
-  tech: string[]
-  link: string
-}
+"use client"
 
-const projects: Project[] = [
-  {
-    title: "JDReportfolio",
-    description:
-      "Mi portafolio personal creado con Next.js, TailwindCSS y TypeScript. Diseño moderno, responsivo y optimizado para rendimiento.",
-    image: "/images/portfolio.png",
-    tech: ["Next.js", "TailwindCSS", "TypeScript"],
-    link: "https://jdreportfolio.vercel.app",
-  },
-  {
-    title: "Inventario App",
-    description:
-      "Aplicación móvil con React Native y Redux para registrar y gestionar inventario con fotos, videos y sincronización local.",
-    image: "/images/inventory.png",
-    tech: ["React Native", "Redux", "Expo"],
-    link: "#",
-  },
-  {
-    title: "API REST con Express",
-    description:
-      "Backend con Node.js, Express y MongoDB para gestionar usuarios y autenticación JWT, con documentación Swagger.",
-    image: "/images/api.png",
-    tech: ["Node.js", "Express", "MongoDB"],
-    link: "#",
-  },
-]
+import Image from "next/image"
+import { projectsData } from "@/data/projectsData"
+import { useLanguage } from "@/context/LanguageContext"
 
 export function ProjectsSection() {
+  const { t, language } = useLanguage()
+
   return (
     <section
       id="projects"
-      className="py-20 px-6 bg-gray-900 text-gray-100 flex flex-col items-center"
+      className="bg-gray-900 text-gray-200 px-6 py-20 text-center"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-        Proyectos Destacados
+      <h2 className="text-3xl md:text-4xl font-bold mb-10">
+        {t("projects", "title")}
       </h2>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full">
-        {projects.map((project) => (
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {projectsData.map((project) => (
           <div
-            key={project.title}
-            className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-gray-700/30 transition-shadow"
+            key={project.id}
+            className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-gray-700 transition"
           >
-            <img
+            <Image
               src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover"
+              alt={project.title[language]}
+              width={500}
+              height={300}
+              className="object-cover w-full h-48"
             />
-
-            <div className="p-6 flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="text-xs bg-gray-700 px-2 py-1 rounded-md text-gray-300"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                {project.title[language]}
+              </h3>
+              <p className="text-gray-400 mb-4">
+                {project.description[language]}
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 mb-4">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-300"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-
-              <a
-                href={project.link}
-                target="_blank"
-                className="text-sm font-medium text-blue-400 hover:underline self-start"
-              >
-                Ver proyecto →
-              </a>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className="text-blue-400 hover:underline"
+                >
+                  {t("projects", "viewProject")}
+                </a>
+              )}
             </div>
           </div>
         ))}

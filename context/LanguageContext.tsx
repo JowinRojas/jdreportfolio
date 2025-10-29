@@ -6,9 +6,10 @@ import { aboutTranslations } from "../translations/about"
 import { projectsTranslations } from "../translations/projects"
 import { contactTranslations } from "../translations/contact"
 import { navbarTranslations } from "../translations/navbar"
+import { footerTranslations } from "@/translations/footer"
 
 type Language = "es" | "en"
-type Section = "navbar" | "page" | "about" | "projects" | "contact"
+type Section = "navbar" | "page" | "about" | "projects" | "contact" | "footer"
 
 interface TranslationContent {
   [key: string]: string
@@ -25,6 +26,7 @@ interface Translations {
   about: SectionTranslations
   projects: SectionTranslations
   contact: SectionTranslations
+  footer: SectionTranslations
 }
 
 interface LanguageContextType {
@@ -39,6 +41,7 @@ const translations: Translations = {
   about: aboutTranslations,
   projects: projectsTranslations,
   contact: contactTranslations,
+  footer: footerTranslations
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)

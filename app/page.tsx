@@ -2,6 +2,7 @@
 import { AboutSection } from "@/components/AboutSection"
 import { ProjectsSection } from "@/components/ProjectsSection"
 import { ContactSection } from "@/components/ContactSection"
+import { FooterSection } from "@/components/Footer"
 import { useLanguage } from "@/context/LanguageContext"
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <AboutSection />
       <ProjectsSection />
       <ContactSection />
+      <FooterSection />
     </>
   );
 }

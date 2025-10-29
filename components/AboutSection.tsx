@@ -15,8 +15,8 @@ export function AboutSection() {
       </h2>
 
       <div className="max-w-3xl text-gray-400 leading-relaxed space-y-4">
-        <p>{t("about", "paragraph1")}</p>
-        <p>{t("about", "paragraph2")}</p>
+        <p>{t("about", "title")}</p>
+        <p>{t("about", "description")}</p>
       </div>
 
       <div className="mt-10">

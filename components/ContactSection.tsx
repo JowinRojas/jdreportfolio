@@ -1,92 +1,46 @@
+"use client"
+
+import { useLanguage } from "@/context/LanguageContext"
+
 export function ContactSection() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="contact"
-      className="py-20 px-6 bg-gray-950 text-gray-100 flex flex-col items-center"
+      className="bg-gray-950 text-gray-200 px-6 py-20 text-center flex flex-col items-center"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-        Contáctame
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        {t("contact", "title")}
       </h2>
-      <p className="text-gray-400 mb-12 text-center max-w-2xl">
-        Si te interesa colaborar, tienes una idea en mente o simplemente quieres
-        saludar, no dudes en escribirme. Estoy abierto a nuevas oportunidades y
-        proyectos interesantes 🚀
+      <p className="text-gray-400 mb-2 text-lg">{t("contact", "subtitle")}</p>
+      <p className="max-w-2xl text-gray-500 mb-10">
+        {t("contact", "description")}
       </p>
 
-      <form
-        action="https://formspree.io/f/mwkgrgzy"
-        method="POST"
-        className="bg-gray-900 p-8 rounded-2xl shadow-lg w-full max-w-lg space-y-4"
-      >
-        <div>
-          <label className="block text-sm font-medium mb-2" htmlFor="name">
-            Nombre
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-gray-100 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium mb-2" htmlFor="email">
-            Correo electrónico
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-gray-100 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium mb-2" htmlFor="message">
-            Mensaje
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows={5}
-            required
-            className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-gray-100 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none"
-          />
-        </div>
-
+      <form className="w-full max-w-md flex flex-col gap-4">
+        <input
+          type="text"
+          placeholder={t("contact", "namePlaceholder")}
+          className="w-full p-3 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 focus:border-gray-500 focus:outline-none"
+        />
+        <input
+          type="email"
+          placeholder={t("contact", "emailPlaceholder")}
+          className="w-full p-3 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 focus:border-gray-500 focus:outline-none"
+        />
+        <textarea
+          rows={5}
+          placeholder={t("contact", "messagePlaceholder")}
+          className="w-full p-3 rounded-lg bg-gray-800 text-gray-200 border border-gray-700 focus:border-gray-500 focus:outline-none"
+        ></textarea>
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold py-2 px-4 rounded-md"
+          className="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-500 transition rounded-lg font-medium text-white"
         >
-          Enviar mensaje
+          {t("contact", "button")}
         </button>
       </form>
-
-      <div className="mt-12 flex gap-6 text-gray-400">
-        <a
-          href="jowinx-001@hotmail.com"
-          className="hover:text-blue-400 transition-colors"
-        >
-          📧 Email
-        </a>
-        <a
-          href="https://github.com/JowinRojas"
-          target="_blank"
-          className="hover:text-blue-400 transition-colors"
-        >
-          💻 GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/jowinrojas/"
-          target="_blank"
-          className="hover:text-blue-400 transition-colors"
-        >
-          🔗 LinkedIn
-        </a>
-      </div>
     </section>
-  );
+  )
 }
