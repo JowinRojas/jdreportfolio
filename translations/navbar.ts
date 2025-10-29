@@ -1,0 +1,28 @@
+export const navbarTranslations = {
+  es: {
+    portfolio:"Jowin Rojas | Portafolio",
+    home: "Inicio",
+    about: "Sobre mí",
+    projects: "Proyectos",
+    contact: "Contacto",
+    language: "Idioma",
+    homeDescription: "Volver al inicio de la página",
+    aboutDescription: "Conoce más sobre mí y mi experiencia",
+    projectsDescription: "Explora mis proyectos y trabajos recientes",
+    contactDescription: "Ponte en contacto conmigo",
+    switchLanguage: "Cambiar idioma",
+  },
+  en: {
+    portfolio:"Jowin Rojas | Portfolio",
+    home: "Home",
+    about: "About",
+    projects: "Projects",
+    contact: "Contact",
+    language: "Language",
+    homeDescription: "Go back to the homepage",
+    aboutDescription: "Learn more about me and my experience",
+    projectsDescription: "Explore my recent projects and work",
+    contactDescription: "Get in touch with me",
+    switchLanguage: "Switch language",
+  },
+}
