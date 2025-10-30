@@ -7,12 +7,15 @@ import { projectsTranslations } from "../translations/projects"
 import { contactTranslations } from "../translations/contact"
 import { navbarTranslations } from "../translations/navbar"
 import { footerTranslations } from "@/translations/footer"
+import { skillsTranslations } from "@/translations/skills"
 
 type Language = "es" | "en"
-type Section = "navbar" | "page" | "about" | "projects" | "contact" | "footer"
+type Section = "navbar" | "page" | "about" | "projects" | "skills" | "contact" | "footer"
+
+type TranslationValue = string | Record<string, string>
 
 interface TranslationContent {
-  [key: string]: string
+  [key: string]: TranslationValue
 }
 
 interface SectionTranslations {
@@ -25,6 +28,7 @@ interface Translations {
   page: SectionTranslations
   about: SectionTranslations
   projects: SectionTranslations
+  skills: SectionTranslations
   contact: SectionTranslations
   footer: SectionTranslations
 }
@@ -32,7 +36,8 @@ interface Translations {
 interface LanguageContextType {
   language: Language
   toggleLanguage: () => void
-  t: (section: Section, key: string) => string
+  // 👇 Cambia el tipo de retorno de string → TranslationValue
+  t: (section: Section, key: string) => TranslationValue
 }
 
 const translations: Translations = {
@@ -40,8 +45,9 @@ const translations: Translations = {
   page: pageTranslations,
   about: aboutTranslations,
   projects: projectsTranslations,
+  skills: skillsTranslations,
   contact: contactTranslations,
-  footer: footerTranslations
+  footer: footerTranslations,
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -64,10 +70,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     })
   }
 
-  const t = (section: Section, key: string): string =>
-    translations[section]?.[language]?.[key] || key
+  // 👇 ahora t() puede devolver string o Record<string, string>
+  const t = (section: Section, key: string): TranslationValue =>
+    translations[section]?.[language]?.[key] ?? key
 
-  // 👇 evita el hydration error
   if (!mounted) return null
 
   return (

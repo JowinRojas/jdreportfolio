@@ -13,7 +13,7 @@ export function ProjectsSection() {
       className="bg-gray-900 text-gray-200 px-6 py-20 text-center"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-10">
-        {t("projects", "title")}
+        {t("projects", "title") as string}
       </h2>
 
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -52,7 +52,7 @@ export function ProjectsSection() {
                   target="_blank"
                   className="text-blue-400 hover:underline"
                 >
-                  {t("projects", "viewProject")}
+                  {t("projects", "viewProject") as string}
                 </a>
               )}
             </div>

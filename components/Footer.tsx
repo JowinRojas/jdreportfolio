@@ -37,8 +37,8 @@ export function FooterSection() {
 
       {/* 🧠 Textos traducidos */}
       <div className="space-y-1">
-        <p className="text-sm">{t("footer", "madeWith")}</p>
-        <p className="text-xs text-gray-500">{t("footer", "rights")}</p>
+        <p className="text-sm">{t("footer", "madeWith") as string}</p>
+        <p className="text-xs text-gray-500">{t("footer", "rights") as string}</p>
       </div>
 
       {/* ⬆️ Volver arriba */}
@@ -48,7 +48,7 @@ export function FooterSection() {
         duration={500}
         className="mt-2 text-sm text-blue-400 hover:text-blue-300 cursor-pointer transition-colors"
       >
-        {t("footer", "backToTop")}
+        {t("footer", "backToTop") as string}
       </ScrollLink>
     </footer>
   )

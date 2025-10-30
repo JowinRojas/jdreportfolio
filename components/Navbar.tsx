@@ -29,7 +29,7 @@ export default function Navbar() {
             offset={-80}
             className="relative cursor-pointer hover:text-blue-400 transition group"
           >
-            {t("navbar", section)}
+            {t("navbar", section) as string}
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full" />
           </ScrollLink>
         ))}
@@ -63,7 +63,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="text-lg cursor-pointer hover:text-blue-400 transition"
             >
-              {t("navbar", section)}
+              {t("navbar", section) as string}
             </ScrollLink>
           ))}
 
