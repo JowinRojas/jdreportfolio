@@ -3,7 +3,7 @@
 import { skillsData } from "@/data/skillsData";
 import { useLanguage } from "@/context/LanguageContext";
 import { Code, Server, Wrench } from "lucide-react";
-import { ReactNode } from "react";
+import { icons } from "@/utils/icons";
 
 export function SkillsSection() {
   const { t } = useLanguage();
@@ -11,7 +11,7 @@ export function SkillsSection() {
   const categories = t("skills", "categories") as Record<string, string>;
   const title = t("skills", "title") as string;
 
-  const icons: Record<string, ReactNode> = {
+  const categoryIcons = {
     frontend: <Code className="text-blue-400 w-6 h-6" />,
     backend: <Server className="text-green-400 w-6 h-6" />,
     tools: <Wrench className="text-yellow-400 w-6 h-6" />,
@@ -31,19 +31,20 @@ export function SkillsSection() {
             className="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 hover:border-blue-500 transition-colors duration-300 shadow-md"
           >
             <div className="flex items-center justify-center gap-2 mb-4">
-              {icons[group.categoryKey]}
+              {categoryIcons[group.categoryKey]}
               <h3 className="text-xl font-semibold text-blue-400">
                 {categories[group.categoryKey]}
               </h3>
             </div>
 
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-3 text-gray-400">
               {group.items.map((skill) => (
                 <li
                   key={skill.name}
-                  className="hover:text-blue-300 transition-colors"
+                  className="flex items-center justify-start gap-3 hover:text-blue-300 transition-colors"
                 >
-                  {skill.name}
+                  {icons[skill.icon as keyof typeof icons]}
+                  <span>{skill.name}</span>
                 </li>
               ))}
             </ul>

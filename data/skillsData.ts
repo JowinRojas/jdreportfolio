@@ -1,6 +1,18 @@
-export const skillsData = [
+export type SkillCategory = "frontend" | "backend" | "tools";
+
+export interface SkillItem {
+  name: string;
+  icon: string;
+}
+
+export interface SkillGroup {
+  categoryKey: SkillCategory;
+  items: SkillItem[];
+}
+
+export const skillsData: SkillGroup[] = [
   {
-    categoryKey: "frontend", 
+    categoryKey: "frontend",
     items: [
       { name: "React", icon: "react" },
       { name: "Next.js", icon: "nextjs" },
