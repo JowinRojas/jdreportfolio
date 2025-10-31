@@ -9,7 +9,7 @@ export default function Navbar() {
   const { t, toggleLanguage, language } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const sections = ["about", "projects", "contact"]
+  const sections = ["about", "projects", "skills", "contact"]
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-200 shadow-lg px-6 md:px-8 py-4 flex justify-between items-center">
