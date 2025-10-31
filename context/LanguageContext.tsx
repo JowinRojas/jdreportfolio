@@ -2,17 +2,18 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react"
 import { pageTranslations } from "../translations/page"
+import { navbarTranslations } from "../translations/navbar"
 import { aboutTranslations } from "../translations/about"
 import { projectsTranslations } from "../translations/projects"
-import { contactTranslations } from "../translations/contact"
-import { navbarTranslations } from "../translations/navbar"
-import { footerTranslations } from "@/translations/footer"
 import { skillsTranslations } from "@/translations/skills"
+import { resumeTranslations } from "@/translations/resume"
+import { contactTranslations } from "../translations/contact"
+import { footerTranslations } from "@/translations/footer"
 
 type Language = "es" | "en"
-type Section = "navbar" | "page" | "about" | "projects" | "skills" | "contact" | "footer"
+type Section = "navbar" | "page" | "about" | "projects" | "skills" | "resume" | "contact" | "footer"
 
-type TranslationValue = string | Record<string, string>
+type TranslationValue = string | Record<string, string | Record<string, string>>
 
 interface TranslationContent {
   [key: string]: TranslationValue
@@ -29,6 +30,7 @@ interface Translations {
   about: SectionTranslations
   projects: SectionTranslations
   skills: SectionTranslations
+  resume: SectionTranslations
   contact: SectionTranslations
   footer: SectionTranslations
 }
@@ -46,6 +48,7 @@ const translations: Translations = {
   about: aboutTranslations,
   projects: projectsTranslations,
   skills: skillsTranslations,
+  resume: resumeTranslations,
   contact: contactTranslations,
   footer: footerTranslations,
 }
