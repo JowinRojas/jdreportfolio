@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/context/LanguageContext"
+import { useLanguage } from "@/context/LanguageContext";
 
 export function ContactSection() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section
@@ -13,7 +13,9 @@ export function ContactSection() {
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         {t("contact", "title") as string}
       </h2>
-      <p className="text-gray-400 mb-2 text-lg">{t("contact", "subtitle") as string}</p>
+      <p className="text-gray-400 mb-2 text-lg">
+        {t("contact", "subtitle") as string}
+      </p>
       <p className="max-w-2xl text-gray-500 mb-10">
         {t("contact", "description") as string}
       </p>
@@ -42,5 +44,5 @@ export function ContactSection() {
         </button>
       </form>
     </section>
-  )
+  );
 }

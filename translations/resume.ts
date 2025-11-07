@@ -1,11 +1,13 @@
-// translations/resume.ts
 export const resumeTranslations = {
   es: {
-    title: "Currículum",
-    download: "Descargar CV",
+    title: "Trayectoria profesional",
+    download: "Descargar hoja de vida",
   },
   en: {
-    title: "Resume",
-    download: "Download CV",
+    title: "Professional Journey",
+    download: "Download Resume",
   },
 };
+
+export type ResumeLang = keyof typeof resumeTranslations;
+export type ResumeTranslation = (typeof resumeTranslations)[ResumeLang];

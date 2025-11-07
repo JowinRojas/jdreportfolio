@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/context/LanguageContext"
-import { Link as ScrollLink } from "react-scroll"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext";
+import { Link as ScrollLink } from "react-scroll";
+import { icons } from "@/utils/icons"; // ✅ usa tus propios íconos
 
 export function FooterSection() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
+  const year = new Date().getFullYear(); // año dinámico
 
   return (
     <footer className="bg-gray-950 text-gray-400 text-center py-10 border-t border-gray-800 flex flex-col items-center gap-4">
@@ -17,7 +18,7 @@ export function FooterSection() {
           rel="noopener noreferrer"
           className="hover:text-white transition-colors"
         >
-          <Github className="w-6 h-6" />
+          {icons.github}
         </a>
         <a
           href="https://www.linkedin.com/in/jowinrojas/"
@@ -25,20 +26,22 @@ export function FooterSection() {
           rel="noopener noreferrer"
           className="hover:text-white transition-colors"
         >
-          <Linkedin className="w-6 h-6" />
+          {icons.linkedin}
         </a>
         <a
           href="mailto:jowinx-001@hotmail.com"
           className="hover:text-white transition-colors"
         >
-          <Mail className="w-6 h-6" />
+          {icons.email}
         </a>
       </div>
 
       {/* 🧠 Textos traducidos */}
       <div className="space-y-1">
         <p className="text-sm">{t("footer", "madeWith") as string}</p>
-        <p className="text-xs text-gray-500">{t("footer", "rights") as string}</p>
+        <p className="text-xs text-gray-500">
+          © {year} Jowin Rojas. {t("footer", "rights") as string}
+        </p>
       </div>
 
       {/* ⬆️ Volver arriba */}
@@ -51,5 +54,5 @@ export function FooterSection() {
         {t("footer", "backToTop") as string}
       </ScrollLink>
     </footer>
-  )
+  );
 }

@@ -38,7 +38,6 @@ interface Translations {
 interface LanguageContextType {
   language: Language
   toggleLanguage: () => void
-  // 👇 Cambia el tipo de retorno de string → TranslationValue
   t: (section: Section, key: string) => TranslationValue
 }
 
@@ -73,7 +72,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     })
   }
 
-  // 👇 ahora t() puede devolver string o Record<string, string>
   const t = (section: Section, key: string): TranslationValue =>
     translations[section]?.[language]?.[key] ?? key
 

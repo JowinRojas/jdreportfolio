@@ -1,67 +1,53 @@
-// data/resumeData.ts
-export interface TimelineItem {
-  id: string;
-  type: "experience" | "education";
-  title: { en: string; es: string };
-  organization: { en: string; es: string };
-  description: { en: string; es: string };
-  startDate: string; // formato YYYY-MM-DD
-  endDate: string | "present";
-}
-
-export const resumeData: TimelineItem[] = [
+export const resumeData = [
   {
-    id: "frontend-developer",
-    type: "experience",
+    id: 1,
     title: {
-      en: "Frontend Developer",
-      es: "Desarrollador Frontend",
-    },
-    organization: {
-      en: "Company X",
-      es: "Empresa X",
-    },
-    description: {
-      en: "Development of web interfaces using React, Next.js and TailwindCSS.",
-      es: "Desarrollo de interfaces web usando React, Next.js y TailwindCSS.",
-    },
-    startDate: "2022-01-01",
-    endDate: "present",
-  },
-  {
-    id: "web-designer",
-    type: "experience",
-    title: {
-      en: "Web Designer",
-      es: "Diseñador Web",
-    },
-    organization: {
-      en: "Freelance",
-      es: "Freelance",
-    },
-    description: {
-      en: "Freelance projects focused on UX/UI design and website development.",
-      es: "Proyectos freelance enfocados en diseño UX/UI y desarrollo web.",
-    },
-    startDate: "2020-03-01",
-    endDate: "2021-12-31",
-  },
-  {
-    id: "software-engineering",
-    type: "education",
-    title: {
-      en: "Software Engineering",
       es: "Ingeniería de Software",
+      en: "Software Engineering",
     },
     organization: {
-      en: "University Y",
       es: "Universidad Y",
+      en: "University Y",
     },
     description: {
-      en: "Bachelor's degree focused on software architecture and agile methodologies.",
       es: "Título en ingeniería de software con enfoque en arquitectura y metodologías ágiles.",
+      en: "Degree in Software Engineering with focus on architecture and agile methodologies.",
     },
     startDate: "2018-01-01",
-    endDate: "2023-06-01",
+    endDate: "2023-01-01",
+  },
+  {
+    id: 2,
+    title: {
+      es: "Diseñador Web",
+      en: "Web Designer",
+    },
+    organization: {
+      es: "Freelance",
+      en: "Freelance",
+    },
+    description: {
+      es: "Proyectos freelance enfocados en diseño UX/UI y desarrollo web.",
+      en: "Freelance projects focused on UX/UI design and web development.",
+    },
+    startDate: "2020-01-01",
+    endDate: "2021-01-01",
+  },
+  {
+    id: 3,
+    title: {
+      es: "Frontend Developer",
+      en: "Frontend Developer",
+    },
+    organization: {
+      es: "Empresa X",
+      en: "Company X",
+    },
+    description: {
+      es: "Desarrollo de interfaces web usando React, Next.js y TailwindCSS.",
+      en: "Developing web interfaces using React, Next.js and TailwindCSS.",
+    },
+    startDate: "2021-01-01",
+    endDate: "present",
   },
 ];

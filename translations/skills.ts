@@ -1,4 +1,3 @@
-// translations/skills.ts
 export const skillsTranslations = {
   es: {
     title: "Habilidades",

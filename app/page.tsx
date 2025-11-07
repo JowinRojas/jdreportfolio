@@ -1,12 +1,12 @@
 "use client";
 
-import { AboutSection } from "@/components/AboutSection"
-import { ProjectsSection } from "@/components/ProjectsSection"
+import { AboutSection } from "@/components/AboutSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ResumeSection } from "@/components/Resume";
-import { ContactSection } from "@/components/ContactSection"
-import { FooterSection } from "@/components/Footer"
-import { useLanguage } from "@/context/LanguageContext"
+import { ContactSection } from "@/components/ContactSection";
+import { FooterSection } from "@/components/Footer";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -17,12 +17,16 @@ export default function Home() {
         id="top"
         className="flex flex-col items-center justify-center min-h-[80vh] text-center px-4"
       >
-        <h2 className="text-4xl font-bold mb-4">{t("page", "greeting") as string}</h2>
-        <p className="text-gray-400 max-w-2xl">{t("page", "subtitle") as string}</p>
+        <h2 className="text-4xl font-bold mb-4">
+          {t("page", "greeting") as string}
+        </h2>
+        <p className="text-gray-400 max-w-2xl">
+          {t("page", "subtitle") as string}
+        </p>
       </section>
       <AboutSection />
       <ProjectsSection />
-      <SkillsSection/>
+      <SkillsSection />
       <ResumeSection />
       <ContactSection />
       <FooterSection />

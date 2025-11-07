@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { projectsData } from "@/data/projectsData"
-import { useLanguage } from "@/context/LanguageContext"
+import Image from "next/image";
+import { projectsData } from "@/data/projectsData";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function ProjectsSection() {
-  const { t, language } = useLanguage()
+  const { t, language } = useLanguage();
 
   return (
     <section
@@ -60,5 +60,5 @@ export function ProjectsSection() {
         ))}
       </div>
     </section>
-  )
+  );
 }

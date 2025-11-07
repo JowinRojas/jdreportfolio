@@ -20,7 +20,7 @@ export function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-gray-200 text-center"
+      className="py-20 bg-linear-to-b from-gray-950 to-gray-900 text-gray-200 text-center"
     >
       <h2 className="text-3xl font-bold mb-12 text-white">{title}</h2>
 

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/context/LanguageContext"
+import { useLanguage } from "@/context/LanguageContext";
 
 export function AboutSection() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section
@@ -28,5 +28,5 @@ export function AboutSection() {
         </a>
       </div>
     </section>
-  )
+  );
 }
