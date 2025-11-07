@@ -160,9 +160,9 @@ export function ResumeSection() {
                           : "Presente"
                         : new Date(item.endDate).getFullYear()}
                     </p>
-                    <p className="text-xs text-gray-400 leading-snug">
+                    {/* <p className="text-xs text-gray-400 leading-snug">
                       {item.description[language]}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               );
