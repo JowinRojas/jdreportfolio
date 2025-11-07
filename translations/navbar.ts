@@ -15,7 +15,7 @@ export const navbarTranslations = {
   en: {
     portfolio:"Jowin Rojas | Portfolio",
     home: "Home",
-    about: "About",
+    about: "About me",
     projects: "Projects",
     contact: "Contact",
     language: "Language",

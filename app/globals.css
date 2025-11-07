@@ -39,3 +39,23 @@ body {
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
+
+/* 🎨 Scrollbar personalizado (compatible con Tailwind v4) */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #111827; /* azul / gris oscuro */
+}
+
+/* Para navegadores basados en WebKit (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #111827; /* gris oscuro (bg-gray-900) */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* azul Tailwind (bg-blue-500) */
+  border-radius: 9999px;
+}

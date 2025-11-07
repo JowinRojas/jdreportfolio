@@ -3,7 +3,7 @@
 import { AboutSection } from "@/components/AboutSection"
 import { ProjectsSection } from "@/components/ProjectsSection"
 import { SkillsSection } from "@/components/SkillsSection";
-import { CurriculumSection } from "@/components/Curriculum";
+import { ResumeSection } from "@/components/Resume";
 import { ContactSection } from "@/components/ContactSection"
 import { FooterSection } from "@/components/Footer"
 import { useLanguage } from "@/context/LanguageContext"
@@ -23,7 +23,7 @@ export default function Home() {
       <AboutSection />
       <ProjectsSection />
       <SkillsSection/>
-      <CurriculumSection />
+      <ResumeSection />
       <ContactSection />
       <FooterSection />
     </>
