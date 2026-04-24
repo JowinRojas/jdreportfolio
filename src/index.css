@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Esta es la forma recomendada en v4 para hooks que inyectan la clase .dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Aquí puedes añadir tus variables globales de color si quieres */
+@theme {
+  --color-deep-navy: #030712;
+  --color-electric-blue: #3b82f6;
+}

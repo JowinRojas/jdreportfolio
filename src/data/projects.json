@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "jdreportfolio",
+      "description": "A portfolio website built with React and Tailwind CSS.",
+      "github": "https://github.com/JowinRojas/jdreportfolio",
+      "demo": "",
+      "image": "https://placehold.co/600x400/1e293b/94a3b8?text=jdreportfolio",
+      "tags": ["Vite", "React", "JavaScript", "Tailwind", "Framer Motion"],
+      "date": "2024-06-01"
+    },
+    {
+      "id": 2,
+      "name": "Project 2",
+      "description": "Description of project 2.",
+      "github": "",
+      "demo": "",
+      "image": "https://placehold.co/600x400/1e293b/94a3b8?text=Proyecto2",
+      "tags": ["PHP", "jQuery"],
+      "date": "2024-05-15"
+    },
+    {
+      "id": 3,
+      "name": "Project 3",
+      "description": "Description of project 3.",
+      "github": "",
+      "demo": "",
+      "image": "https://placehold.co/600x400/1e293b/94a3b8?text=Proyecto3",
+      "tags": ["Python", "Django"],
+      "date": "2024-04-20"
+    }
+  ]
+}

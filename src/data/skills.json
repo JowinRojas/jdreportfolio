@@ -1,0 +1,41 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "skills": [
+        { "name": "JavaScript", "icon": "JavaScript", "level": "platinum" },
+        { "name": "React", "icon": "React", "level": "gold" },
+        { "name": "TypeScript", "icon": "TypeScript", "level": "silver" },
+        { "name": "Next.js", "icon": "NextJS", "level": "silver" },
+        { "name": "TailwindCSS", "icon": "Tailwind", "level": "gold" },
+        { "name": "Bootstrap", "icon": "Bootstrap", "level": "gold" },
+        { "name": "jQuery", "icon": "jQuery", "level": "silver" }
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend & Mobile",
+      "skills": [
+        { "name": "Node.js", "icon": "NodeJS", "level": "gold" },
+        { "name": "Express", "icon": "Express", "level": "gold" },
+        { "name": "PHP", "icon": "PHP", "level": "gold" },
+        { "name": "React Native", "icon": "ReactNative", "level": "bronze" },
+        { "name": "Expo", "icon": "Expo", "level": "silver" },
+        { "name": "MongoDB", "icon": "MongoDB", "level": "silver" }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "DevOps & Tools",
+      "skills": [
+        { "name": "Git", "icon": "Git", "level": "gold" },
+        { "name": "GitHub", "icon": "Github", "level": "gold" },
+        { "name": "Docker", "icon": "Docker", "level": "bronze" },
+        { "name": "Nginx", "icon": "Nginx", "level": "bronze" },
+        { "name": "Postman", "icon": "Postman", "level": "silver" },
+        { "name": "ESLint", "icon": "ESLint", "level": "silver" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "timeline": [
+    {
+      "id": 1,
+      "type": "education",
+      "title": "Técnica Profesional en Sistemas",
+      "entity": "Politécnico Colombiano JIC",
+      "startDate": "2013-01-01",
+      "endDate": "2014-12-31",
+      "description": "Formación técnica profesional en sistemas de información."
+    },
+    {
+      "id": 2,
+      "type": "education",
+      "title": "Tecnología en Sistemas de Información",
+      "entity": "Politécnico Colombiano JIC",
+      "startDate": "2015-01-01",
+      "endDate": null,
+      "description": "Estudios pausados en tecnología en sistemas de información."
+    },
+    {
+      "id": 3,
+      "type": "work",
+      "title": "QA Web & Mobile",
+      "entity": "Contactica",
+      "startDate": "2015-03-01",
+      "endDate": "2015-09-01",
+      "description": "Práctica técnica profesional. Validación funcional y técnica de plataformas en entorno productivo."
+    },
+    {
+      "id": 4,
+      "type": "work",
+      "title": "Auxiliar de Sistemas",
+      "entity": "Tigo UNE",
+      "startDate": "2017-01-01",
+      "endDate": "2017-07-01",
+      "description": "Práctica profesional en tecnología en sistemas de información."
+    },
+    {
+      "id": 5,
+      "type": "work",
+      "title": "Analista Desarrollo PHP",
+      "entity": "Imagine S.A.S",
+      "startDate": "2021-08-01",
+      "endDate": "2021-11-01",
+      "description": "Mantenimiento de aplicaciones PHP con Laravel, auditorías de calidad y validación funcional en entornos productivos."
+    },
+    {
+      "id": 6,
+      "type": "work",
+      "title": "Desarrollador PHP",
+      "entity": "Synergy Xperience S.A.S",
+      "startDate": "2021-11-01",
+      "endDate": "2023-01-01",
+      "description": "Desarrollo de landing pages con PHP, JavaScript, jQuery y Bootstrap. Mantenimiento y mejora de sistemas internos empresariales."
+    },
+    {
+      "id": 7,
+      "type": "work",
+      "title": "Desarrollador Web",
+      "entity": "Alnago",
+      "startDate": "2024-03-01",
+      "endDate": "2025-09-01",
+      "description": "Desarrollo web con React y Express, landing pages con TailwindCSS, app de inventarios con React Native y MongoDB, infraestructura con Docker y Nginx."
+    }
+  ]
+}
