@@ -22,8 +22,8 @@ i18n.use(initReactI18next).init({
           greeting: "Hi, my name is",
           subtitle: "I build robust software solutions.",
           description:
-            "Developer focused on the .NET and React ecosystem. Specialized in creating scalable apps with clean design.",
-          cta: "Projects",
+            "Full Stack Developer with 3+ years of experience building web apps with React and Node.js, mobile apps with React Native, and backend services with Express and MongoDB. Focused on clean code, scalable architecture and good practices.",
+          cta: "View projects",
         },
         projects: {
           label: "Projects",
@@ -89,8 +89,8 @@ i18n.use(initReactI18next).init({
           greeting: "Hola, mi nombre es",
           subtitle: "Construyo soluciones de software robustas.",
           description:
-            "Desarrollador enfocado en el ecosistema .NET y React. Especializado en crear aplicaciones escalables con diseño limpio.",
-          cta: "Proyectos",
+            "Desarrollador Full Stack con más de 3 años de experiencia creando aplicaciones web con React y Node.js, apps móviles con React Native y servicios backend con Express y MongoDB. Enfocado en código limpio, arquitectura escalable y buenas prácticas.",
+          cta: "Ver proyectos",
         },
         projects: {
           label: "Proyectos",
