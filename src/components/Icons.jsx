@@ -23,10 +23,11 @@ import {
   SiExpo,
   SiGit,
   SiNginx,
-  SiEslint,
+  SiEslint
 } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import { Sun, Moon, Globe, X as XIcon, Menu as MenuIcon } from "lucide-react";
+import { Sun, Moon, Globe, X as XIcon, Menu as MenuIcon, Mail, Send } from "lucide-react";
 
 // --- ICONOS DE INTERFAZ ---
 export const ICONS = {
@@ -66,6 +67,9 @@ export const ICONS = {
       className="text-slate-700 dark:text-slate-300 hover:text-blue-400 transition-colors"
     />
   ),
+  Mail: () => <Mail size={18} className="text-slate-700 dark:text-slate-300 hover:text-blue-400 transition-colors" />,
+  Send: () => <Send size={18} className="text-slate-700 dark:text-slate-300 hover:text-blue-400 transition-colors" />,
+  Linkedin: () => <FaLinkedin size={18} className="text-slate-700 dark:text-slate-300 hover:text-blue-400 transition-colors" />
 };
 
 // --- ICONOS DE TECNOLOGÍAS ---

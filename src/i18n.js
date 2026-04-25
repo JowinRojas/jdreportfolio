@@ -23,7 +23,7 @@ i18n.use(initReactI18next).init({
           subtitle: "I build robust software solutions.",
           description:
             "Developer focused on the .NET and React ecosystem. Specialized in creating scalable apps with clean design.",
-          cta: "View my projects",
+          cta: "Projects",
         },
         projects: {
           label: "Projects",
@@ -55,6 +55,25 @@ i18n.use(initReactI18next).init({
           hint: "Hover to explore · Drag to scroll",
           download: "Download CV",
         },
+        contact: {
+          label: "Get in touch",
+          title: "Contact",
+          subtitle:
+            "Have a project in mind or want to work together? Send me a message.",
+          name: "Name",
+          namePlaceholder: "Your name",
+          email: "Email",
+          emailPlaceholder: "your@email.com",
+          message: "Message",
+          messagePlaceholder: "Tell me about your project...",
+          send: "Send message",
+          sent: "Opening mail client...",
+          linksText:
+            "You can also find me on these platforms. I usually respond within 24 hours.",
+          mailSubject: "Portfolio contact from",
+          mailFrom: "From:",
+        },
+        footer: { madeWith: "Built with React & Tailwind" },
       },
     },
     es: {
@@ -71,7 +90,7 @@ i18n.use(initReactI18next).init({
           subtitle: "Construyo soluciones de software robustas.",
           description:
             "Desarrollador enfocado en el ecosistema .NET y React. Especializado en crear aplicaciones escalables con diseño limpio.",
-          cta: "Ver mis proyectos",
+          cta: "Proyectos",
         },
         projects: {
           label: "Proyectos",
@@ -103,6 +122,25 @@ i18n.use(initReactI18next).init({
           hint: "Hover para explorar · Arrastra para navegar",
           download: "Descargar CV",
         },
+        contact: {
+          label: "Hablemos",
+          title: "Contacto",
+          subtitle:
+            "¿Tienes un proyecto en mente o quieres trabajar juntos? Envíame un mensaje.",
+          name: "Nombre",
+          namePlaceholder: "Tu nombre",
+          email: "Correo",
+          emailPlaceholder: "tu@correo.com",
+          message: "Mensaje",
+          messagePlaceholder: "Cuéntame sobre tu proyecto...",
+          send: "Enviar mensaje",
+          sent: "Abriendo cliente de correo...",
+          linksText:
+            "También puedes encontrarme en estas plataformas. Normalmente respondo en menos de 24 horas.",
+          mailSubject: "Contacto portfolio de",
+          mailFrom: "De:",
+        },
+        footer: { madeWith: "Hecho con React & Tailwind" },
       },
     },
   },
